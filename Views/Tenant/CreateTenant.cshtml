@@ -1,0 +1,134 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create Tenant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/alert.css" />
+    <link rel="stylesheet" href="/css/tenantcreate.css" />
+    <style>
+        body {
+            background-image: url('/assets/img/kaiadmin/Login_backgorund.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: left;
+        }
+
+        .header {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            padding-top: 20px;
+        }
+
+        .subheader {
+            padding-top: 10px;
+            font-size: 1.2em;
+            color: #00b7f0;
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+
+        .footer {
+            padding-top: 35px;
+            font-size: 0.9em;
+            color: #b0c4de;
+        }
+
+        .custom-input-wrapper {
+            display: flex; /* Use flexbox to align items in a row */
+            align-items: center; /* Vertically center the items */
+            gap: 10px; /* Adds space between the icon and input */
+        }
+
+        .custom-input {
+            flex: 1; /* Makes the input take up the remaining space */
+        }
+    </style>
+</head>
+<body>
+    <div id="divStep1" class="row login-box">
+
+        <div class="col-6" style="background-color:white;margin-left: 25%;   border: 1px solid black; border-radius: 10px;" align="center">
+            
+                <div class="subheader">ワークスペース登録</div>
+                <div class="custom-input-wrapper" style="padding-top:30px">
+                    <i style="color:black;" class="bi bi-database"></i>  <!-- Icon -->
+                    <input id="txtTenantID" type="text" class="form-control form-control-sm custom-input" placeholder="Tenant ID" /> <!-- Input Field -->
+                </div>
+                <div class="custom-input-wrapper" style="padding-top:30px">
+                    <i  style="color:black;" class="bi bi-buildings"></i>
+                    <input id="txtCompanyName" type="text" class="form-control form-control-sm custom-input" placeholder="Company Name" />
+                </div> 
+                <div class="tenant-actionbox" style="    margin-top: 30%; }">
+                    <a href="/0/Tenant/HomePage" class="btn btn-dark" style="margin-right:20px;width: 30%;">Cancel</a>
+                    <button id="btnNext" class="btn btn-info" style="margin-right:20px;width: 30%;">Next</button>
+                </div> 
+        </div> 
+    </div>
+
+    <div id="divStep2" class="row login-box" style="display:none;height: 55% !important;">
+        <div class="col-6" style="background-color:white;margin-left: 25%;   border: 1px solid black; border-radius: 10px;" align="center">
+            <div class="subheader">  管理者登録 </div>
+            <div class="custom-input-wrapper" style="padding-top:30px">
+                <i style="color:black;" class="bi bi-envelope"></i>
+                <input id="txtEmail" type="text" class="form-control form-control-sm custom-input" placeholder="Email" />
+            </div>
+            <div class="custom-input-wrapper" style="padding-top:30px">
+                <i style="color:black;" class="bi bi-shield-lock"></i>
+                <input id="txtPassword" type="password" class="form-control form-control-sm custom-input" placeholder="Password" />
+            </div>
+            <div class="custom-input-wrapper" style="padding-top:30px">
+                <i style="color:black;" class="bi bi-person"></i>
+                <input id="txtName" type="text" class="form-control form-control-sm custom-input" placeholder="Name" />
+            </div>
+            <div class="custom-input-wrapper" style="padding-top:30px">
+                <i style="color:black;" class="bi bi-view-stacked"></i>
+                <select id="ddlPosition" class="form-select form-select-sm custom-input">
+                    <option value="owner">Owner</option>
+                    <option value="manager">Manager</option>
+                    <option value="staff">Staff</option>
+                </select>
+            </div>
+
+
+            <div class="custom-input-wrapper" style="padding-top:30px">
+                <i style="color:black;" class="bi bi-phone"></i>
+                <input id="txtMobileNo" type="text" class="form-control form-control-sm custom-input" placeholder="Mobile Number" />
+            </div>
+             
+            <div class="tenant-actionbox" style="    margin-top: 10%; }">
+                <a id="btnBack" href="#" class="btn btn-dark" style="margin-right:20px;width: 30%;">Back</a>
+                <button id="btnRegister" class="btn btn-info" style="margin-right:20px;width: 30%;">Register</button>
+            </div>
+        </div> 
+     
+    </div> 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/js/service.js?v=@ViewBag.JsVersion"></script>
+    <script src="/js/tenantregister.js?v=@ViewBag.JsVersion"></script>
+</body>
+</html>

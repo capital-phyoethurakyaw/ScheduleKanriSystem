@@ -1,0 +1,62 @@
+.v-center{
+    vertical-align : middle
+}
+
+.w150 {
+    width: 150px;
+}
+
+.w100{
+    width:100px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.custom-input {
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    outline: none;
+}
+
+.divmain {
+    margin-top: 80px;
+}
+
+.dt-container .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dt-info {
+    padding-top: 0 !important;
+}
+
+.dt-length, .dt-search {
+    margin-left: 30px !important;
+}
+
+.divpaging{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    cursor: pointer;
+}
+
+.nav-toggle{
+    cursor: pointer;
+}

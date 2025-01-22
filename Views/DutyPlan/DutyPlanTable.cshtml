@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "DutyPlanTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="/css/dutyplan.css" />
+
+
+<div id="divList" class="card">
+    <div class="card-header"> 
+        <div class="title-row">
+            <div class="monthfilter">
+                <h6><span class="lblYear"></span> 年<span class="lblMonth"></span>月</h6>
+                <button id="btnPrev"><i class="bi bi-caret-left"></i></button>
+                <input id="txtMonth" type="text" class="lblMonth text-center" readonly />
+                <button id="btnNext"><i class="bi bi-caret-right"></i></button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="card-body">
+        <table id="tblDuty" class="table table-sm table-hover table-bordered w-100">
+            <thead></thead>
+        </table>
+    </div>
+</div>
+
+<input type="file" id="fileInput" style="display: none;" accept="image/*">
+<input type="hidden" id="hfMode" />
+
+<script src="/js/dutyplantable.js?v=@ViewBag.JsVersion"></script>
+
+

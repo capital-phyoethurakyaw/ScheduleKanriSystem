@@ -1,0 +1,95 @@
+﻿.title-row {
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.monthfilter {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.monthfilter h6 {
+    margin: 0 10px 0 0;
+    font-size: 16px;
+}
+
+.monthfilter button {
+    border: 1px solid #d6d0d0;
+    background-color: transparent;
+    padding: 5px; 
+    margin: 0; 
+}
+
+.monthfilter input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 0; 
+    width: 100px; 
+    text-align: center; 
+}
+
+#btnPrev {
+    border-bottom-left-radius : 5px;
+    border-top-left-radius : 5px;
+}
+
+#btnNext {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.table thead th, td {
+    padding : 0 !important;
+    text-align: center;
+    width: 5px;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th {
+    padding: 10px 0 10px 0 !important;
+}
+
+.duty {
+    height: 20px;
+    background-color: mediumpurple;
+    border-top: 1px solid purple;
+}
+
+.td-userinfo{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.td-userinfo img {
+    border-radius: 50%;
+    width: 30px;
+}
+
+.td-userinfo button {
+    background-color: gray;
+    border: none;
+    color: white;
+}
+
+.td-userinfo button:hover {
+    background-color: gray;
+    border: none;
+    color: white;
+}
+
+#calendarPopup {
+    background-color: ghostwhite;
+    border-radius: 10px;
+}
+
+.table-condensed{
+    width: 100%;
+}
+
+.table-condensed td{
+    padding : 5px !important;
+}
+
