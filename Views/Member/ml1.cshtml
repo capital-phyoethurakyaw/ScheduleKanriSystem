@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="/css/company.css" />
+
+<div id="divList" class="card" style="display:none;">
+    <h6 class="card-header">Member List</h6>
+    <div class="card-body">
+
+        <table id="tblMember" class="table table-sm table-hover table-striped table-bordered w-100">
+            <thead>
+                <tr>
+                    <th style="width:50px"><input class="form-check-input" type="checkbox" id="checkAll" /></th>
+                    <th>User ID / Name</th>
+                    <th></th>
+                    <th>Position</th>
+                    <th>User Role</th>
+                    <th>Register Date & Time</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<script src="/js/memberlist.js?v=@ViewBag.JsVersion"></script>

@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Database\" />
     <Folder Include="wwwroot\images\profile\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\js\" />

@@ -1,0 +1,33 @@
+﻿.row-btn {
+    display: flex;
+    align-items: center; /* Aligns buttons vertically */
+    justify-content: space-between; /* Ensures proper spacing for left and center sections */
+    width: 100%; /* Ensures the row takes full width */
+}
+
+.div-leftbtn {
+    flex: 0 0 auto; /* Prevents the Delete button from stretching */
+}
+
+.div-centerbtn {
+    flex: 1; /* Takes the remaining space */
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+}
+
+.divimage{
+    margin-top: 10px;
+    width:100%;
+    text-align: center;
+}
+
+.divimage img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.imgcircle {
+    width: 50px;
+    border-radius: 50%;
+
+}
